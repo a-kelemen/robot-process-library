@@ -24,7 +24,3 @@ class RobotProcessLibrary(
 		OsProcessLibrary.OsProcessLibrary.__init__(self)
 		EmailProcessLibrary.EmailProcessLibrary.__init__(self)
 		OcrProcessLibrary.OcrProcessLibrary.__init__(self)
-
-	def vvv(self):
-		print("RobotProcessLibrary, v" + self.__version__)
-

@@ -26,26 +26,27 @@ class PostInstallCommand(install):
 		install.run(self)
 
 
-setuptools.setup(name='robotprocesslibrary',
-      version='0.1',
-      description='Library for robotic process automation.',
-      url='',
-      author='Andras Kelemen',
-      author_email='kelemenandras11@gmail.com',
-      license='MIT',
-      packages=setuptools.find_packages(exclude=['RobotProcessLibrary.tests']),
+setuptools.setup(
+	name='robotprocesslibrary',
+	version='0.1',
+	description='Library for robotic process automation.',
+	url='',
+	author='Andras Kelemen',
+	author_email='kelemenandras11@gmail.com',
+	license='MIT',
+	packages=setuptools.find_packages(exclude=['RobotProcessLibrary.tests']),
 
-      install_requires=[
-        'robotframework',
-        'EmailProcessLibrary',
-        'OsProcessLibrary',
-        'ExcelProcessLibrary',
-        'OcrProcessLibrary',
-      ],
-      cmdclass={
-        'install': PostInstallCommand,
-      },
-      test_suite="tests",
-      tests_require=['nose'],
-      zip_safe=False
-      )
+	install_requires=[
+		'robotframework',
+		'EmailProcessLibrary',
+		'OsProcessLibrary',
+		'ExcelProcessLibrary',
+		'OcrProcessLibrary',
+	],
+	cmdclass={
+		'install': PostInstallCommand,
+	},
+	test_suite="tests",
+	tests_require=['nose'],
+	zip_safe=False
+)
