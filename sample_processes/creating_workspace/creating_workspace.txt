@@ -1,0 +1,18 @@
+*** Settings ***
+Library                    RobotProcessLibrary
+Library                    DateTime
+Library                    OperatingSystem
+
+*** Test Cases ***
+Creating Workspace
+    ${date}=               Get Current Date  result_format=datetime
+    ${today}=              Set Variable  ${date.year}_${date.month}_${date.day}
+    Create Folder          workspace/${today}/fajlok
+    Create Folder          workspace/${today}/adatok
+
+    Create New File        workspace/${today}/fajlok/dokumentum.docx
+
+    ${mail}=               Get Email  kelemenandras11@gmail.com  napi feladatok
+    Save Attachments       ${mail}  workspace/${today}/adatok
+    ${todo_list}=          Get Email Text  ${mail}
+    Create File            workspace/napi_teendok.txt  ${todo_list}
