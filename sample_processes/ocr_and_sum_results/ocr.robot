@@ -1,7 +1,7 @@
 *** Settings ***
 Library                    RobotProcessLibrary
 
-*** Test Cases ***
+*** Processes ***
 Ocr And Sum Results
 
     ${szamok}=            Ocr Image  szamok.png

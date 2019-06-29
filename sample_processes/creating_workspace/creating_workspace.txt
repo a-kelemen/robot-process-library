@@ -3,7 +3,7 @@ Library                    RobotProcessLibrary
 Library                    DateTime
 Library                    OperatingSystem
 
-*** Test Cases ***
+*** Processes ***
 Creating Workspace
     ${date}=               Get Current Date  result_format=datetime
     ${today}=              Set Variable  ${date.year}_${date.month}_${date.day}

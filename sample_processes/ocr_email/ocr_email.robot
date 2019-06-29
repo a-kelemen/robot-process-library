@@ -1,7 +1,7 @@
 *** Settings ***
 Library                    RobotProcessLibrary
 
-*** Test Cases ***
+*** Processes ***
 Ocr Email
 
     ${mail}=              Get Email  kelemenandras11@gmail.com  ocr_szamok

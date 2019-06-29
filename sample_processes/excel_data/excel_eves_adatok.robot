@@ -7,7 +7,7 @@ ${sum}=              0
 ${max}=              0
 
 
-*** Test Cases ***
+*** Processes ***
 Excel Sum Years
     Open Workbook       workspace/data.xlsx
     Set Active Worksheet  data
